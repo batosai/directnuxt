@@ -1,0 +1,23 @@
+{
+  "name": "directnuxt",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "workspaces/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start"
+  },
+  "devDependencies": {
+    "turbo": "^1.12.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "sharp": "^0.34.2"
+  }
+}
