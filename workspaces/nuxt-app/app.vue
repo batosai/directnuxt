@@ -1,6 +1,11 @@
+<script setup lang="ts">
+import { Header } from '@opsone/storybook'
+
+const user = {"name":"Jane Doe"}
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <Header :user="user" />
+  <NuxtRouteAnnouncer />
+  <NuxtWelcome />
 </template>

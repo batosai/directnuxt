@@ -16,8 +16,5 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "description": "",
-  "dependencies": {
-    "sharp": "^0.34.2"
-  }
+  "description": ""
 }

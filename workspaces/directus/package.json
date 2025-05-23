@@ -1,6 +1,7 @@
 {
-  "name": "directus",
+  "name": "@opsone/directus",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "directus start",
@@ -12,6 +13,7 @@
   "description": "",
   "dependencies": {
     "directus": "^11.7.2",
+    "sharp": "^0.34.2",
     "pg": "^8.16.0"
   }
 }

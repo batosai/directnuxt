@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "@opsone/storybook",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -21,5 +21,11 @@
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vue-tsc": "^2.2.8"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./button": "./src/atoms/button/Button.vue",
+    "./header": "./src/molecules/header/Header.vue",
+    "./page": "./src/organisms/page/Page.vue"
   }
 }
