@@ -11,6 +11,7 @@
     "start": "turbo run start"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
     "turbo": "^1.12.4"
   },
   "keywords": [],
