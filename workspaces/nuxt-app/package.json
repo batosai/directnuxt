@@ -12,6 +12,8 @@
   "dependencies": {
     "@directus/sdk": "^19.1.0",
     "@nuxt/eslint": "^1.4.1",
+    "@nuxtjs/robots": "^5.2.10",
+    "@nuxtjs/sitemap": "^7.3.0",
     "@opsone/design_system": "file:../storybook",
     "eslint": "^9.27.0",
     "nuxt": "^3.17.4",

@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint'],
+  modules: ['@nuxt/eslint', '@nuxtjs/sitemap', '@nuxtjs/robots'],
   routeRules: {
     // Generated at build time for SEO purpose
     '/': { prerender: true },
