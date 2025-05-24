@@ -3,13 +3,17 @@ import { Header } from '@opsone/design_system'
 
 const user = {"name":"Jane Doe"}
 
-const { data } = await useFetch('/api/articles')
+const { data: articles } = await useFetch('/api/articles')
+const { data: home } = await useFetch('/api/home')
 </script>
 
 <template>
   <Header :user="user" />
 
-  {{ data }}
+  {{ articles }}
+  {{ home }}
+
+  <img :src="`/api/assets/${home?.image.id}/${home?.image.filename_download}`" :alt="home?.title">
 
   <NuxtRouteAnnouncer />
   <NuxtWelcome />
