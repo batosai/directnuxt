@@ -1,11 +1,6 @@
-import { createDirectus, rest, staticToken, readItems } from '@directus/sdk'
+import type { Article } from '~/types/article'
 
-interface Article {
-  id: number
-  title: string
-  status: 'published' | 'draft' | 'archived'
-  slug: string
-}
+import { createDirectus, rest, staticToken, readItems } from '@directus/sdk'
 
 interface Schema {
   articles: Article[]
@@ -16,6 +11,7 @@ export default defineEventHandler(async (event) => {
 
   const client = createDirectus<Schema>(config.directusUrl).with(staticToken(config.directusToken)).with(rest())
   const articles = await client.request(readItems('articles', {
+    fields: ['id', 'title', 'content', 'status', 'slug', 'seo'],
     filter: {
       slug: {
         _eq: event.context.params?.slug

@@ -1,10 +1,6 @@
-import { createDirectus, rest, staticToken, readItems } from '@directus/sdk'
+import type { Article } from '~/types/article'
 
-interface Article {
-  id: number
-  title: string
-  status: 'published' | 'draft' | 'archived'
-}
+import { createDirectus, rest, staticToken, readItems } from '@directus/sdk'
 
 interface Schema {
   articles: Article[]

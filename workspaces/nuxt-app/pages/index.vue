@@ -15,7 +15,9 @@ const home = await useHomePage()
   <br />
   {{ home }}
 
-  <img :src="`/api/assets/${home?.image?.id}/${home?.image?.title}.jpg`" :alt="home?.title">
+  <img :src="`/assets/home/${home?.image?.id}/${home?.image?.title}.jpg`" :alt="home?.title">
+
+  <NuxtLink to="/articles">Articles</NuxtLink>
 
   <NuxtRouteAnnouncer />
   <NuxtWelcome />

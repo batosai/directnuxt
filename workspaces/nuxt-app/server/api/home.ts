@@ -1,16 +1,6 @@
+import type { Home } from '~/types/home'
+
 import { createDirectus, rest, staticToken, readSingleton } from '@directus/sdk'
-
-interface Home {
-  id: number
-  title: string
-  image?: {
-    id: string
-    title: string
-  } | null,
-  'image.id'?: string
-  'image.title'?: string
-}
-
 interface Schema {
   home: Home
 }
