@@ -19,6 +19,7 @@ export default defineEventHandler(async (event) => {
       width: 300,
       height: 300,
       quality: 50,
+      format: 'jpg',
       fit: 'contain',
     }),
   )
