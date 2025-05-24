@@ -4,7 +4,7 @@ export interface Home {
   image?: {
     id: string
     title: string
-  } | null,
+  } | null
   'image.id'?: string
   'image.title'?: string
 }

@@ -4,10 +4,10 @@ export const useHomePage = async () => {
   const { data: home, error } = await useFetch<Home>('/api/home')
 
   if (error.value || !home) {
-    throw createError({ 
-      statusCode: 404, 
+    throw createError({
+      statusCode: 404,
       statusMessage: 'Page non trouvé',
-      fatal: true 
+      fatal: true,
     })
   }
 

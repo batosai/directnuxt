@@ -11,16 +11,22 @@ function HomeDTO(home: Home) {
     title: home.title,
     image: {
       id: home.image?.id,
-      title: home.image?.title
-    }
+      title: home.image?.title,
+    },
   }
 }
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
 
-  const client = createDirectus<Schema>(config.directusUrl).with(staticToken(config.directusToken)).with(rest())
-  const home = await client.request(readSingleton('home', { fields: ['id', 'title', 'image.id', 'image.title'] }))
+  const client = createDirectus<Schema>(config.directusUrl)
+    .with(staticToken(config.directusToken))
+    .with(rest())
+  const home = await client.request(
+    readSingleton('home', {
+      fields: ['id', 'title', 'image.id', 'image.title'],
+    }),
+  )
 
   return HomeDTO(home)
 })

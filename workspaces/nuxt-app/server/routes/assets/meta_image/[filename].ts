@@ -13,7 +13,9 @@ export default defineEventHandler(async (event) => {
   const filename = getRouterParam(event, 'filename')
   const id = filename?.split('.')[0]
 
-  const client = createDirectus<Schema>(config.directusUrl).with(staticToken(config.directusToken)).with(rest())
+  const client = createDirectus<Schema>(config.directusUrl)
+    .with(staticToken(config.directusToken))
+    .with(rest())
 
   if (!id) {
     throw createError({

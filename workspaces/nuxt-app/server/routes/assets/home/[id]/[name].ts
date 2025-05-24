@@ -12,7 +12,9 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const id = getRouterParam(event, 'id')
 
-  const client = createDirectus<Schema>(config.directusUrl).with(staticToken(config.directusToken)).with(rest())
+  const client = createDirectus<Schema>(config.directusUrl)
+    .with(staticToken(config.directusToken))
+    .with(rest())
 
   const result = await client.request(
     readAssetRaw(id!, {

@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "format": "prettier --write .",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -21,7 +22,9 @@
   "devDependencies": {
     "@nuxtjs/robots": "^5.2.10",
     "@nuxtjs/sitemap": "^7.3.0",
+    "eslint-config-prettier": "^10.1.5",
     "nuxt-og-image": "^5.1.4",
-    "nuxt-schema-org": "^5.0.5"
+    "nuxt-schema-org": "^5.0.5",
+    "prettier": "3.5.3"
   }
 }
