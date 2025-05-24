@@ -8,11 +8,6 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     // Cached for 1 hour
     '/api/*': { cache: { maxAge: process.env.CACHE_MAX_AGE ? parseInt(process.env.CACHE_MAX_AGE) : 60 * 60 } },
-    '/assets/**': {
-      proxy: {
-        to: process.env.DIRECTUS_URL + '/assets/**'
-      }
-    }
   },
   runtimeConfig: {
     // Variables privées (côté serveur uniquement)
