@@ -29,8 +29,6 @@ interface Schema {
   home: Home
 }
 
-// TODO DTO
-
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
 
