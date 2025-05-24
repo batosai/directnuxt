@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "directus start",
-    "dev": "directus start"
+    "dev": "directus start",
+    "create-snapshot": "directus schema snapshot ./snapshot.yaml",
+    "apply-snapshot": "directus schema apply ./snapshot.yaml"
   },
   "keywords": [],
   "author": "",
