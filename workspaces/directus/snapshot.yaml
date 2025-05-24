@@ -616,7 +616,9 @@ fields:
       hidden: false
       interface: file-image
       note: null
-      options: null
+      options:
+        crop: false
+        folder: fb12b280-8c6b-47f4-bb25-d381b1fadfd5
       readonly: false
       required: false
       sort: 3
@@ -671,6 +673,50 @@ fields:
       data_type: character varying
       default_value: null
       max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: home
+    field: seo
+    type: json
+    meta:
+      collection: home
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: seo-interface
+      note: null
+      options:
+        showFocusKeyphrase: true
+        showOgImage: true
+        showSearchControls: true
+        showSitemap: true
+      readonly: false
+      required: false
+      sort: 8
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: home
+      data_type: json
+      default_value: null
+      max_length: null
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
