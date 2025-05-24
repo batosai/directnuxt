@@ -7,7 +7,11 @@ export default defineNuxtConfig({
     // Generated at build time for SEO purpose
     '/': { prerender: true },
     // Cached for 1 hour
-    '/api/*': { cache: { maxAge: process.env.CACHE_MAX_AGE ? parseInt(process.env.CACHE_MAX_AGE) : 60 * 60 } },
+    '/api/*': { 
+      cache: process.env.NODE_ENV === 'production' 
+        ? { maxAge: process.env.CACHE_MAX_AGE ? parseInt(process.env.CACHE_MAX_AGE) : 60 * 60 }
+        : false
+     },
   },
   runtimeConfig: {
     // Variables privées (côté serveur uniquement)
