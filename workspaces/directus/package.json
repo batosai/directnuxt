@@ -8,6 +8,8 @@
     "dev": "directus start",
     "create-snapshot": "directus schema snapshot ./snapshot.yaml",
     "apply-snapshot": "directus schema apply ./snapshot.yaml",
+    "pull": "npx directus-sync pull",
+    "push": "npx directus-sync push",
     "format": "prettier --write ."
   },
   "keywords": [],
@@ -15,9 +17,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "directus": "^11.7.2",
-    "sharp": "^0.34.2",
-    "pg": "^8.16.0"
+    "directus": "^11.8.0",
+    "directus-extension-sync": "^3.0.3",
+    "directus-sync": "^3.2.3",
+    "pg": "^8.16.0",
+    "sharp": "^0.34.2"
   },
   "devDependencies": {
     "prettier": "3.5.3"

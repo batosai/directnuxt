@@ -2,3 +2,4 @@ uploads/*
 !uploads/.gitkeep
 
 .env
+directus-sync.config.cjs
