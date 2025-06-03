@@ -5,13 +5,14 @@
   "workspaces": [
     "workspaces/*"
   ],
+  "packageManager": "npm@10.9.2",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
     "start": "turbo run start"
   },
   "devDependencies": {
-    "turbo": "^2.5.3"
+    "turbo": "^2.5.4"
   },
   "keywords": [],
   "author": "",
