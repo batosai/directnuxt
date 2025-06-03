@@ -30,3 +30,4 @@ npm install
 - https://directus.io/docs/
 - https://storybook.js.org/docs
 - https://vitepress.dev/
+- https://tractr.github.io/directus-sync
