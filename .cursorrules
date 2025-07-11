@@ -1,0 +1,87 @@
+Always respond in French
+Always create commit in English
+Always create comment in English
+
+Tu travailles dans un monorepo en TypeScript structuré en workspaces.
+
+Les principales stacks utilisées sont :
+- Nuxt 3 avec Composition API uniquement
+- TailwindCSS v4
+- Directus 11 (backend headless CMS)
+- VitePress pour la documentation
+- Storybook structuré selon le design system atome
+- Utiliser la dernière version LTS de nodeJS ainsi que npm en gestionnaire de paquets
+
+Organisation du monorepo :
+- workspaces/nuxt-app : application front principale Nuxt 3
+- workspaces/directus : backend headless Directus
+- workspaces/vitepress : documentation VitePress
+- workspaces/storybook : système de design visuel
+- packages/ : composants réutilisables
+
+Conventions :
+- Toujours utiliser la Composition API dans Nuxt 3 (pas d’Options API)
+- Toujours utiliser le mode Setup Stores pour Pinia
+- Utiliser Tailwind CSS via les classes utilitaires (pas de CSS traditionnel)
+- Structure Storybook : src/atoms, src/molecules, src/organisms
+- Nommer les composants selon PascalCase
+- Écrire les composants dans `*.vue` avec `<script setup lang="ts">`
+- Isoler la logique dans des fonctions `useXXX` dans `composables/`
+- Aucune logique métier dans les composants visuels
+- Utiliser `defineProps` et `defineEmits` pour la typage clair
+- Tous les composants doivent avoir des stories dans Storybook
+- Préférer `definePageMeta` à des options classiques dans les pages Nuxt
+
+Ton rôle :
+- Appliquer ces conventions automatiquement dans tes suggestions
+- Corriger tout code ne respectant pas ces règles
+- Réécrire les composants, pages, ou fonctions si nécessaire
+- Proposer des refactors vers des composables si de la logique est détectée dans des composants visuels
+
+Gestion des Types :
+- Utiliser TypeScript strict mode
+- Définir des interfaces pour tous les props de composants
+- Utiliser des types génériques pour les stores Pinia
+- Éviter l'utilisation de `any`
+
+Gestion des API :
+- Utiliser `useFetch` de Nuxt pour les appels API
+- Implémenter un système de cache avec `useAsyncData`
+- Gérer les erreurs avec des composables dédiés
+- Utiliser des interceptors pour la gestion des tokens
+
+Performance :
+- Utiliser le lazy loading pour les composants lourds
+- Implémenter le code splitting automatique
+- Optimiser les images avec le module `@nuxt/image`
+- Utiliser le SSR pour les pages critiques
+
+Sécurité :
+- Utiliser les variables d'environnement pour les secrets
+- Implémenter CSRF protection
+- Valider les entrées utilisateur avec Zod
+- Utiliser des headers de sécurité appropriés
+
+Accessibilité :
+- Suivre les directives WCAG 2.1
+- Utiliser des composants accessibles par défaut
+- Implémenter la navigation au clavier
+- Ajouter des attributs ARIA appropriés
+
+Documentation :
+- Documenter les composants avec JSDoc
+- Maintenir une documentation API à jour
+- Documenter les composables avec des exemples
+- Utiliser des commentaires pour les logiques complexes
+
+Gestion des États : 
+- Utiliser des stores Pinia modulaires
+- Éviter la duplication d'état
+- Implémenter des actions asynchrones dans les stores
+- Utiliser des getters pour les calculs dérivés
+
+Internationalisation :
+- Utiliser `@nuxtjs/i18n` pour la gestion des langues
+- Maintenir des fichiers de traduction séparés
+- Utiliser des clés de traduction typées
+- Implémenter la détection automatique de la langue
