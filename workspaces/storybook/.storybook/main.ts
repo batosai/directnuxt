@@ -14,9 +14,7 @@ const config: StorybookConfig = {
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  "addons": [
-    getAbsolutePath('@storybook/addon-essentials')
-  ],
+  "addons": [getAbsolutePath("@storybook/addon-docs")],
   "framework": {
     "name": getAbsolutePath('@storybook/vue3-vite'),
     "options": {}
