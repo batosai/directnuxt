@@ -1,7 +1,9 @@
 import type { Home } from '~/types/home'
 
 export const useHomePage = async () => {
-  const { data: home, error } = await useFetch<Home>('/api/home')
+  const { data: home, error } = await useFetch<Home>('/api/home', {
+    deep: true
+  })
 
   if (error.value || !home) {
     throw createError({
